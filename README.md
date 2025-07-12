@@ -174,6 +174,14 @@ if __name__ == '__main__':
 
 ---
 
+## 📈 Impact & Benefits
+
+- Demonstrates integration of serverless backend with managed NoSQL database for scalable form processing  
+- Shows hands-on experience with AWS API Gateway, Lambda, and secure IAM roles  
+- Includes deploying a Python Flask app on EC2 behind an Application Load Balancer for high availability  
+- Enables building real-world REST APIs with best practices in security, error handling, and scalability  
+
+
 ## 🙋‍♀️ Author
 
 **Kosha Gohil**  
