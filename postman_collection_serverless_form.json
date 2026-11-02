@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "AWS Serverless Contact Form API",
+    "description": "Postman Collection for AWS Serverless Contact Form API (Lambda + API Gateway + DynamoDB)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Contact Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Kosha Gohil\",\n  \"email\": \"kosha@example.com\",\n  \"message\": \"Hello from the Serverless Contact Form API!\"\n}"
+        },
+        "url": {
+          "raw": "https://{{api_gateway_id}}.execute-api.{{aws_region}}.amazonaws.com/prod/submit",
+          "protocol": "https",
+          "host": [
+            "{{api_gateway_id}}",
+            "execute-api",
+            "{{aws_region}}",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "prod",
+            "submit"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Submissions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{api_gateway_id}}.execute-api.{{aws_region}}.amazonaws.com/prod/messages",
+          "protocol": "https",
+          "host": [
+            "{{api_gateway_id}}",
+            "execute-api",
+            "{{aws_region}}",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "prod",
+            "messages"
+          ]
+        }
+      }
+    }
+  ]
+}
